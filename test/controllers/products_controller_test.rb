@@ -53,4 +53,15 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to products_url
   end
+  test 'should get list of products' do
+    get products_url
+    assert_response :success
+    assert_select 'h1', 'Products'
+    assert_select 'tbody .list_line_odd', minimum: 1
+    assert_select 'tbody .list_line_even', minimum: 1
+    assert_select 'tbody td a', 'Show', minimum: 1
+    assert_select 'tbody td a', 'Edit', minimum: 1
+    assert_select 'tbody td a', 'Destroy', minimum: 1
+    assert_select 'a', 'New Product', 1
+  end
 end
