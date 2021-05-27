@@ -3,6 +3,12 @@
 <% end %>
 
 <h1>Pracmatic catalog</h1>
+<h2>You have visited this site 
+  <% counter_background = @counter > 5 ? "counter-red" : "counter-blue"  %>
+  <span class="<%="counter #{counter_background}"%>" >
+    <%= pluralize(@counter, 'time') %>
+  </span>
+</h2>
 <ul class="catalog">
   <%cache @products do %>
     <% @products.each do |product| %>
