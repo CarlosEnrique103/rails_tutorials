@@ -9,13 +9,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Product.create!(
-  title: 'Guitarra telecaster - Jay Turser',
+  title: 'Guitarra telecaster - Jay Turser 2',
   description: '<p> <em>Guitarra modelo telecaster</em>, color marrón co buen acabado</p>',
   image_url: 'guitarra-turser.jpg',
   price: 950.00
 )
 Product.create!(
-  title: 'Build Chatbot Interactions',
+  title: 'Build Chatbot Interactions 2',
   description: '<p>
   <em>Responsive, Intuitive Interfaces with Ruby</em>
   The next step in the evolution of user interfaces is here.
