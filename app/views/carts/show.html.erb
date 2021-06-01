@@ -4,9 +4,8 @@
       <%= notice %>
     </aside>
   <% end %>
-  <h2>Your pragmatic cart</h2>
-  
   <% if @cart.id === session[:cart_id] %>
+    <h2>Your pragmatic cart</h2>
     <table>
       <tbody>
       <% @cart.line_items.each do |line_item| %>
@@ -28,9 +27,5 @@
       </tfoot>
     </table>
     <%= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?'} %>
-  <% else %>
-    <p>Number of id not match</p>
   <% end %>
-  
- 
 </article>
