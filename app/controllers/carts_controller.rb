@@ -8,6 +8,10 @@ class CartsController < ApplicationController
 
   # GET /carts/1 or /carts/1.json
   def show
+    return @cart if session[:cart_id] == @cart.id
+
+    flash[:notice] = 'Cart id not found'
+    redirect_to store_index_url
   end
 
   # GET /carts/new
